@@ -1,0 +1,35 @@
+﻿@using NVCModels.ViewModels
+@model HomeVM
+
+<table align="center" border="1" style="text-align:center; border:solid; border-color:black;">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Discount Price</th>
+            <th>Category</th>
+            <th>Color</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        
+            @foreach (var product in Model.Products)
+            {
+                <tr>
+                    <td>@product.Id</td>
+                    <td> <img src="@product.Image" style="width: 100px; height: auto;"/> </td>
+                <td style="width: 70px">@product.Name</td>
+                    <td>@product.Description</td>
+                <td style="width: 70px">@product.Price</td>
+                    <td>@product.DiscountPrice</td>
+                    <td>@product.Category</td>
+                <td style="width: 70px">@product.Color</td>
+                </tr>
+            }
+    </tbody>
+
+</table>
